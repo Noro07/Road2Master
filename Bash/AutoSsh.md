@@ -98,4 +98,6 @@ alias sh='sh ~/autoSSH.sh'
 
 编辑完后记得 source 一下
 
+---
+
 到此为止，就可以使用 `sh 110` 来自动链接到对应的 server
