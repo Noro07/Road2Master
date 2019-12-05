@@ -20,3 +20,6 @@ npm 升级就更简单了，只需要在终端中输入：
 ## npm 安装中显示细节
 
 > npm install --loglevel silly
+
+ref:
+<https://stackoverflow.com/questions/34209013/how-to-get-more-info-from-npm-install>
