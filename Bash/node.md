@@ -23,3 +23,9 @@ npm 升级就更简单了，只需要在终端中输入：
 
 ref:
 <https://stackoverflow.com/questions/34209013/how-to-get-more-info-from-npm-install>
+
+## npm install 的时候，控制台权限不够强型安装
+
+安装时候，提示出现为 permission denied
+
+sudo npm i --unsafe-perm
