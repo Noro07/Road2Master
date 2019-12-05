@@ -98,3 +98,19 @@ export PATH=/usr/local/mongodb/bin:\$PATH
 
 9. 安装 cnpm （很多时候用 npm 安装其他的插件会失败，用 cnpm，当然也有相反情况）
    npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+## 改变 node 下对应的 npm 版本
+
+### navigate to nvm's node lib folder
+
+(replace v8.4.0 with your version)
+
+```bash
+cd ~/.nvm/versions/node/v8.4.0/lib/
+```
+
+### update npm right there
+
+> npm install npm@5
+
+### reopen your terminal
