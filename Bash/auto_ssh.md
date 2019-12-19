@@ -61,13 +61,21 @@ expect -f ~/ssh_auto_login.exp $serverHost $serverUser $serverPwd
 set TARGET [lindex $argv 0]
 set USER [lindex $argv 1]
 set PWD [lindex $argv 2]
-set timeout 10
+set LOG [lindex $argv 3]
+set timeout 30
 
 spawn ssh $USER@$TARGET
 expect {
     "*yes/no" {send "yes\r"; exp_continue}
     "*password:" {send "$PWD\r"}
 }
+
+if {"logs" eq $LOG} {
+ expect {
+  "#" {send "tail -f ~/.pm2/logs/npm-out.log\r"}
+ }
+}
+
 interact
 ```
 
