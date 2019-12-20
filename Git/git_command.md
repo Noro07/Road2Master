@@ -1,8 +1,12 @@
 # Git
 
-## git 放弃当前没有 commit 的
+## git 放弃当前没有 commit 的代码改动
 
 > git checkout .
+
+## This will unstage all files you might have staged with git add
+
+> git reset
 
 ## 回滚到上个 commit
 
