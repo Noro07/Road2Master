@@ -1,6 +1,16 @@
 # 进程守护
 
-> pm2 start npm -- start --watch
+启动
+
+> pm2 start npm --watch --name "AMG" -- start
+
+删除
+
+> pm2 delete id
+
+暂停
+
+> pm2 stop id
 
 启动参数说明：
 
@@ -12,7 +22,7 @@
 - -e --error \<path>：错误输出日志文件的路径。
 - --interpreter \<interpreter>：the interpreter pm2 should use for executing app (bash, python...)。比如你用的 coffee script 来编写应用。
 
-pm2 log默认地址 `$HOME/.pm2/logs/XXX-err.log` XXX是app的名字
+pm2 log 默认地址 `$HOME/.pm2/logs/XXX-err.log` XXX 是 app 的名字
 
 ---
 
