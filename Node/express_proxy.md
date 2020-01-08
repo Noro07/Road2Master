@@ -17,6 +17,26 @@ app.listen(3000);
 // http://localhost:3000/api/foo/bar -> http://www.example.org/api/foo/bar
 ```
 
+如果不通的情况，可以添加以下元素
+
+```js
+app.use(
+  "/amg",
+  proxy({
+    target: "http://localhost:8080",
+    onProxyReq: restream,
+    secure: false,
+    logLevel: "debug",
+    changeOrigin: true,
+    pathRewrite: { "^/amg": "http://localhost:8080/amg" },
+    headers: {
+      Connection: "keep-alive"
+    }
+  })
+);
+```
+
+
 ## get 能通但是 post 收不到请求
 
 <https://github.com/chimurai/http-proxy-middleware/issues/40>
