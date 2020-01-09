@@ -21,21 +21,20 @@ app.listen(3000);
 
 ```js
 app.use(
-  "/amg",
+  '/amg',
   proxy({
-    target: "http://localhost:8080",
+    target: 'http://localhost:8080',
     onProxyReq: restream,
     secure: false,
-    logLevel: "debug",
+    logLevel: 'debug',
     changeOrigin: true,
-    pathRewrite: { "^/amg": "http://localhost:8080/amg" },
+    pathRewrite: { '^/amg': 'http://localhost:8080/amg' },
     headers: {
-      Connection: "keep-alive"
+      Connection: 'keep-alive'
     }
   })
 );
 ```
-
 
 ## get 能通但是 post 收不到请求
 

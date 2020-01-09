@@ -1,4 +1,4 @@
-# install Java
+# Install Java
 
 ref:
 <https://stackoverflow.com/questions/24342886/how-to-install-java-8-on-mac>
