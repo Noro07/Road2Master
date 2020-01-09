@@ -2,7 +2,9 @@
 
 启动
 
-> pm2 start npm --watch --name "AMG" -- start
+~~pm2 start npm --watch --name "AMG" -- start~~
+
+> pm2 start npm --name "AMG" -- run server:prod
 
 删除
 
