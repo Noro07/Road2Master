@@ -1,22 +1,34 @@
 # docker 指令
 
+build image
+
+在项目根目录执行（dockerfile所在目录）
+
+> docker image build -t web-ui:latest .
+
+docker tag
+
+> docker tag web-ui:1.0 prod-web-ui:latest
+
+docker push
+
+> docker push prod-web-ui
+
+docker container run
+
+> docker container run -p 3005:3005 --name ui -d web-ui:latest
+
 杀死所有正在运行的容器
 
-```bash
-docker kill $(docker ps -a -q)
-```
+> docker kill $(docker ps -a -q)
 
 删除所有已经停止的容器
 
-```bash
-docker rm $(docker ps -a -q)
-```
+> docker rm $(docker ps -a -q)
 
 删除所有未打 dangling 标签的镜像
 
-```bash
-docker rmi $(docker images -q -f dangling=true)
-```
+> docker rmi $(docker images -q -f dangling=true)
 
 删除所有镜像
 
@@ -34,15 +46,11 @@ docker rmi -f $(docker images -q)
 
 停止一个 container
 
-```bash
-docker stop peoplewebpocnginx-con
-```
+> docker stop peoplewebpocnginx-con
 
 删除一个 container
 
-```bash
-docker rm peoplewebpoc-con
-```
+> docker rm peoplewebpoc-con
 
 run 一个 name 为 peoplewebpoc-con 端口为 3101:3001 和 3100:3000 image 为 \${DOCKER_IMAGE_TAG}
 
